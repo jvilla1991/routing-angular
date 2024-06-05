@@ -10,6 +10,11 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
+    <!-- This will give us an error as we are using the RELATIVE PATH -->
+    <!-- <a routerLink="servers">Reload Page</a> -->
+
+    <!-- However, if we use the ABSOLUTE PATH with the added '/', it will work -->
+    <a routerLink="/servers">Reload Page</a>
     <app-edit-server></app-edit-server>
     <hr>
     <app-server></app-server>
