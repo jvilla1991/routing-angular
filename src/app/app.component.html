@@ -11,11 +11,17 @@
         <li role="presentation"><a href="/users">Users</a></li> 
         -->
 
+
         <!-- We'll use routerLink directive that will parse a string with a slash. It's different because -->
-        <li role="presentation" class="active"><a routerLink="/">Home</a></li>
-        <li role="presentation"><a routerLink="/servers">Servers</a></li>
+        <li role="presentation" class="active" routerLinkActive="active"
+        
+        [routerLinkActiveOptions]="{exact: true}"
+        ><a routerLink="/">Home</a></li>
+        <!-- This above that says "routerLinkActiveOptions" will require the routerlinkactive path to be exact. this is to prevent it from being active even after clicking on another link that may contain '/' in the route -->
+
+        <li role="presentation" routerLinkActive="active"><a routerLink="/servers">Servers</a></li>
         <!-- We can also use PropertyBinding to give more precise, fine grain control -->
-        <li role="presentation"><a [routerLink]="['/users']">Users</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['/users']">Users</a></li>
       </ul>
     </div>
   </div>
