@@ -16,7 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'users/:id', component: UserComponent }, // the colon tells Angular that this is a dynamic route
+  { path: 'users/:id/:name', component: UserComponent }, // the colon tells Angular that this is a dynamic route
   { path: 'servers', component: ServersComponent }  
 ]
 
